@@ -1,0 +1,29 @@
+.feature {
+    text-align: center;
+
+    &__title{
+        font-family: 'lifehack', sans-serif;
+        font-weight: 500;
+        color: rgb(47, 50, 52);
+        font-size: 24px;
+        padding-top:36px;
+    }
+
+    &__text{  
+        font-size: 14px;
+        font-family: "ubuntu", sans-serif;
+        font-weight: 300;
+        color: rgba(47, 50, 52, 0.8);
+        line-height: 1.714;
+        text-align: center;
+          
+    }
+
+
+}
+
+.feature-img{
+    display: flex;
+    justify-content: center;
+    
+}
