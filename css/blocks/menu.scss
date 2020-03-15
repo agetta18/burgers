@@ -3,32 +3,97 @@
     align-items: center;
     font-family: 'ubuntu', sans-serif;
     font-weight: 500;
-    font-size: 13px;
+    font-size: rem(13px);
+}
+
+.menu__hamburger{
+    @include tablets{
+        width:0;
+        overflow: hidden;  
+    }
 
 }
+.menu--open .menu__list {
+    @include tablets{
+        width: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(45,47,49,0.9);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 1.667;
+        font-weight: 100;
+        font-size: rem(23px);
+        z-index: 100;
+    }
+
+    .menu__item{
+        @include tablets{
+        flex-direction: column;
+        margin-bottom: rem(28px);
+        }
+    }
+    
+}
+
+
 
 .menu__item{
     display: flex;
     align-items: center;
+
     &:before {
         content: "";
         display: block;
-        width: 4px;
-        height: 4px;
+        width: rem(4px);
+        height: rem(4px);
         border-radius: 50%;
         background: currentColor;
-        margin-left: 15px; 
+        margin-left: rem(15px); 
+      
     }
+
+    &:before {
+        @include tablets{
+        margin-bottom: rem(28px); 
+        }
+    }
+
     &:first-child{
         &:before{
         display: none;
         }
     }
+
 }
 
 .menu__link{
-    margin-left: 15px; 
-   text-decoration: none;
-   text-transform: uppercase;
-   font-size: 13px;
+    margin-left: rem(15px); 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(13px);
+}
+
+
+.menu__close{
+    display: none;
+    
+}
+
+.menu--open .menu__close{
+    @include tablets{
+        display: block;
+        position: absolute;
+        top:rem(30px);
+        right: rem(12px);
+
+    }
+}
+.close{
+    width: 30px;
+    height: 30px;
 }

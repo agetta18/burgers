@@ -1,0 +1,10 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__adress {
+  padding-top: rem(10px);
+  padding-bottom: rem(15px);
+  align-items: center;
+  line-height: 1.714;
+}

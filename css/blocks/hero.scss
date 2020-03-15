@@ -1,6 +1,5 @@
 .hero {
-    background: url(../../img/background/hero.png) center center / cover no-repeat;
-    background-size: cover;
+    background: url("../img/background/hero.png") center center / cover no-repeat;
     color:#fff;
     position: relative;
 }
@@ -12,7 +11,7 @@
 }
 
 .hero__desc {
-   font-size: 65px;
+   font-size: rem(65px);
    font-family: 'lifehack', sans-serif; 
    line-height: 1;
 }
@@ -20,11 +19,30 @@
 .hero__content {
     display: flex;
     align-items: center;
-    flex:0.8;
+    flex: 0.8;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5% 10%;
+        justify-items: center;
+    }
+
+    @include phones{
+        padding: 5% 10%;
+
+    }
 }
 
 .hero__text {
     width: 50%;
-    padding-top: 50px;
-    padding-left:20px;
+    padding-top: rem(50px);
+    padding-left:rem(20px);
+    @include tablets{
+        width: auto;
+        padding-top: rem(40px);
+        padding-left: 0;
+    }
+
 }

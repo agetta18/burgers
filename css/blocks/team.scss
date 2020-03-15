@@ -1,0 +1,135 @@
+.team{
+    background: url("../img/background/team.png") center center / cover no-repeat ;
+    background-size: cover;
+    position: relative;
+}
+
+.container-team{
+    position: absolute;
+    background: rgb(45,47,49,0.8);
+    width: 50%;
+    height: 100%;
+    left:50%;
+    top:0;
+
+    @include tablets{
+        width: 100%;
+        left: 0;
+
+    }
+}
+
+.team__content{
+    margin-top: rem(113px);
+    margin-left: rem(95px);
+
+    @include tablets{
+        text-align: center;
+        padding:30% 25%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    @include phones{
+        padding:31% 19%;
+    }
+
+
+}
+
+
+.team__name{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'gagalin', sans-serif;
+    padding-bottom: rem(37px);
+
+    @include tablets{
+        display: inline-flex;
+    }
+
+    &:before {
+        content: ""; 
+         display: inline-block;
+         border: rem(4px) solid transparent; 
+         border-top: rem(6px) solid $yellow;
+         position: absolute;
+         transition: transform .5s;
+         top:rem(8px);
+         left:rem(-17px);
+        
+   }
+
+}
+
+.is-open .team__name:before{
+    content: ""; 
+    display: inline-block;
+    border: rem(4px) solid transparent; 
+    border-bottom: rem(6px) solid $yellow;
+    position: absolute;
+    transition: transform .5s;
+    top:rem(4px);
+    left:rem(-17px);
+   
+}
+
+.is-open .team__name  {
+    color:$yellow;
+    padding-bottom: rem(17px);
+    @include tablets{
+        padding-bottom: 0;
+    }
+}
+
+.is-open .more {
+    height: 100%;
+    padding-bottom: rem(40px);
+    @include tablets{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+   
+}
+
+
+.more{
+    display: flex;
+    // width: rem(350px);
+    color:white;
+    font-family: 'ubuntu', sans-serif;
+    font-size: rem(14px);
+    height: 0;
+    overflow: hidden;
+   
+  
+    
+}
+
+.more__content{   
+    line-height: 1.714;   
+}
+
+.more__avatar{
+    border-radius: 50%; 
+    padding-right: rem(18px);
+    @include tablets{
+       padding-right: 0;
+       padding-bottom: 3%;
+       padding-top: 3%;
+    }
+}
+
+
+
+
+.more__title{
+    font-family: 'ubuntu', sans-serif;
+    font-weight: bold;
+    margin-bottom: rem(10px);
+   
+}

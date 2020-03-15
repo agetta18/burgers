@@ -1,0 +1,20 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials__link {
+  margin-left: rem(20px);
+  text-decoration: none;
+  color: #5a5a5a;
+}
+.socials__link:hover {
+  color: #fff;
+}
+
+.icon-vk,
+.icon-fb,
+.icon-inst,
+.icon-twitter {
+  font-size: rem(20px);
+}

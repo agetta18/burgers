@@ -1,5 +1,5 @@
 .features{
-    background: url(../../img/background/features.png) center center / cover no-repeat;
+    background: url("../img/background/features.png") center center / cover no-repeat;
     
 }
 
@@ -7,9 +7,27 @@
     display: flex;
     justify-content: space-between;
 
+
+    @include phones{
+        flex-direction: column;
+        padding: 2%;
+    }
+
 }
 
 .features__item{
     width: calc(100% / 3 - 26px);
-    
+
+    @include tablets {
+        width: calc(100% / 3 - 30px);
+
+    }
+    @include phones{
+        display: flex;
+        width: 100%;
+        padding-bottom: rem(50px);
+        
+        
+     }
+   
 }

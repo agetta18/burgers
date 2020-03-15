@@ -1,0 +1,13 @@
+.phone {
+  color: #dc4e27;
+  font-weight: bold;
+}
+
+.phone__number {
+  text-decoration: none;
+}
+
+.icon-phone {
+  font-size: rem(11px);
+  margin-right: rem(5px);
+}

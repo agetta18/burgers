@@ -1,29 +1,79 @@
 .feature {
     text-align: center;
+   
 
     &__title{
         font-family: 'lifehack', sans-serif;
         font-weight: 500;
         color: rgb(47, 50, 52);
-        font-size: 24px;
-        padding-top:36px;
+        font-size: rem(24px);
+        padding-top:rem(36px);
+      
+
+        @include tablets{
+            margin-bottom: rem(12px);
+        }
+
+        @include phones{
+            padding-top: 0;
+            margin-bottom: rem(25px);
+        }
+        
     }
 
     &__text{  
-        font-size: 14px;
+        font-size: rem(14px);
         font-family: "ubuntu", sans-serif;
         font-weight: 300;
         color: rgba(47, 50, 52, 0.8);
         line-height: 1.714;
         text-align: center;
-          
+
+        @include tablets{
+            font-size: rem(14px);;
+        }
+        @include phones{
+            text-align: left;
+        
+        }
+       
     }
 
+    &__content{
+        @include phones{
+            text-align: left;
+            padding-left: rem(25px);
+            
+        }
+    }
+
+  
 
 }
 
 .feature-img{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100;
+    height: 90;
+   
+
     
+}
+.meat{
+    width: 100px;
+    height: 90px;
+}
+.hand{
+    width: 100px;
+    height: 90px; 
+    padding-left: 5%;
+    @include phones{
+        padding-left: 10%;}
+    
+} 
+.natural{
+    width: 100px;
+    height: 90px; 
 }
