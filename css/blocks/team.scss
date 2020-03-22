@@ -45,6 +45,8 @@
     color: white;
     font-family: 'gagalin', sans-serif;
     padding-bottom: rem(37px);
+    cursor: pointer;
+    
 
     @include tablets{
         display: inline-flex;

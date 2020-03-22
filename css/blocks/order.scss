@@ -98,8 +98,8 @@
     }
     
     &__radio-styler{
-        width: 15px;
-        height: 15px;
+        width: rem(15px);
+        height: rem(15px);
         border-radius: 50%;
         background-color: #fff;
         margin-right: rem(10px);
@@ -112,8 +112,8 @@
         content: '';
         display: block;
         background-color: rgb(227, 80, 40);
-        width: 7px;
-        height: 7px;
+        width: rem(7px);
+        height: rem(7px);
         border-radius: 50%;
         position: absolute;
         flex: 0 0 auto;
@@ -122,8 +122,8 @@
         }
     }
     &__radio:checked ~ .order__radio-styler{
-        width: 15px;
-        height: 15px;
+        width: rem(15px);
+        height: rem(15px);
         border-radius: 50%;
         background-color: #fff;
     }

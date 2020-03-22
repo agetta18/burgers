@@ -23,6 +23,11 @@
         margin-bottom: rem(58px);
     }
 
+    @include phones{
+        margin-bottom: rem(34px);
+
+    }
+
 
     &--centered {
         text-align: center;
@@ -48,7 +53,21 @@
             left:rem(56px);
             top:rem(60px);
         }
+    }
+    &--slider{
+        color:#fff;
+        font-family: 'gagalin', sans-serif;
+        font-size: rem(72px);
+        margin-bottom: rem(50px);
 
+        @include tablets{
+           text-align: center;
+    
+        }
+        @include phones{   
+            font-size: rem(50px);
+            margin-bottom: rem(35px);
+        }
 
     }
 }

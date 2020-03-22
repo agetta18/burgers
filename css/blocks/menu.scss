@@ -4,42 +4,38 @@
     font-family: 'ubuntu', sans-serif;
     font-weight: 500;
     font-size: rem(13px);
-}
-
-.menu__hamburger{
     @include tablets{
-        width:0;
-        overflow: hidden;  
-    }
-
-}
-.menu--open .menu__list {
-    @include tablets{
-        width: 100%;
         position: fixed;
         top:0;
         left: 0;
         right: 0;
         bottom: 0;
         background: rgb(45,47,49,0.9);
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        z-index: 1;
         line-height: 1.667;
         font-weight: 100;
         font-size: rem(23px);
-        z-index: 100;
-    }
-
-    .menu__item{
-        @include tablets{
+        justify-content: center;
         flex-direction: column;
-        margin-bottom: rem(28px);
-        }
+        display: none;
+       
+
     }
-    
+  
 }
 
+.menu__list--open{
+    @include tablets{
+        display: flex;
+    }
+}
+
+.menu__item{
+    @include tablets{
+    flex-direction: column;
+    margin-bottom: rem(28px);
+    }
+}
 
 
 .menu__item{
@@ -65,9 +61,11 @@
 
     &:first-child{
         &:before{
-        display: none;
+            display: none;
         }
     }
+    
+    
 
 }
 
@@ -79,21 +77,3 @@
 }
 
 
-.menu__close{
-    display: none;
-    
-}
-
-.menu--open .menu__close{
-    @include tablets{
-        display: block;
-        position: absolute;
-        top:rem(30px);
-        right: rem(12px);
-
-    }
-}
-.close{
-    width: 30px;
-    height: 30px;
-}
