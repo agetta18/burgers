@@ -1701,7 +1701,6 @@ a {
 
 .left__col {
   width: 50%;
-  height: 100%;
   padding: 2%;
 }
 @media screen and (max-width: 768px) {
