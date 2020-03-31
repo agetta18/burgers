@@ -31,6 +31,7 @@
 
     &--centered {
         text-align: center;
+        margin-top: 0;
       
     }
     &--color--black {
@@ -59,6 +60,8 @@
         font-family: 'gagalin', sans-serif;
         font-size: rem(72px);
         margin-bottom: rem(50px);
+        margin-top: 10%;
+        margin-top: 10%;
 
         @include tablets{
            text-align: center;

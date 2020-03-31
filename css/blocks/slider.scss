@@ -112,6 +112,7 @@
         display: flex;
         overflow: hidden;
         margin: 0 rem(10px);
+        
         @include tablets{
             max-width: rem(644px);  
         } 
@@ -121,6 +122,7 @@
         display: flex;
         flex: 0 0 100%; 
         max-width: 100%;
+       
 
         @include tablets{
             flex-direction: column;
@@ -145,11 +147,19 @@
         position: absolute;
         top:rem(28px);
         left:rem(13px);   
+        @include tablets{
+            top:rem(30px);
+            left:rem(16px); 
+
+        }
     }
 
     &__name{
         position: absolute;
         left:rem(15px);
+        @include tablets{
+            left:rem(16px);
+        }
     }
     
 }
@@ -165,23 +175,28 @@
 .right__col{
     width: 50%;
     margin-left: rem(20px);
+    padding-top: 5%;
 
     @include tablets{
+        margin-left: 0;
+        padding: 3%;
         width: 100%;
         text-align: center;
        
         }
+       
 }
 
 .left__col{
     width: 50%;
 
     @include tablets{
+        padding-top: 0;
         position: relative;
         width: 80%;
         padding-bottom: 2%;
         }
         @include phones{   
-            width: 100%;
+            width: 95%;
         }
 }

@@ -1,6 +1,11 @@
 .food{
     background: url("../img/background/menu.png") center center / cover no-repeat;
     position: relative;
+
+    @include phones{
+        position: relative;
+    }
+    
 }
 
 
@@ -9,20 +14,44 @@
     bottom: 0;
     right: 0;
     top:0;
+    @include teblets{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
 
 .food__item{
-        float: left;
-        height: 100%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+   
+    
         &.open {
+            @include phones{
+                position: absolute;
+        
+                z-index: 2;
+            }
+           
             .food__title {
                 color: $yellow;
             }
 
             .food__more{
-                overflow: visible;
+                transition: width 1s;
+                overflow: hidden;
                 width: rem(540px);
-
+               @include tablets{
+                //    max-width: rem(528px);
+                //    flex:1;
+               }
+               @include phones{
+                   flex:.9;
+               }
+                
+             
             }
         }
     
@@ -35,7 +64,7 @@
     float: left;
     position: relative;
     text-decoration: none;
-
+    cursor: pointer;
    
 }
 
@@ -53,6 +82,7 @@
     left: 50%;
     top: 100%;
     margin-top: rem(-20px);
+   
 }
 
 .food__more{
@@ -61,11 +91,8 @@
 	background: rgba(#2f3234, .93);
 	width: 0;
     overflow: hidden;
+    position: relative;
    
-      
-    
-    
-  
 }
 
 .food__more-text{
@@ -78,6 +105,32 @@
     line-height: 1.8;
 
 }
+
+.food__close{
+    display: none;
+    z-index: 10000;
+    span{
+        display: inline-block;
+        width: rem(18px);
+        height: rem(3px);
+        border-radius: rem(2px);
+        background-color:#fff;
+        position: absolute;
+        top: 3%;
+        left: 95%;
+                &:first-of-type{
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:last-of-type{
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+        }
+    @include phones{
+        display: flex;
+    }
+   
+}    
+
 
 
 

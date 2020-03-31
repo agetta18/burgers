@@ -25,7 +25,7 @@
 @font-face {
   font-family: "ubuntu";
   src: url("ubuntu-regular-webfont.woff2") format("woff2"), url("ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {

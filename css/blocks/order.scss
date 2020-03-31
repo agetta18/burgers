@@ -57,6 +57,7 @@
             border-color: $yellow;
         }
        
+       
 
        
     }
@@ -84,6 +85,8 @@
         font-weight: 500;
         font-size: rem(13px);
         padding: rem(13px) rem(17px);
+        cursor: pointer;
+        outline: none;
           
     }
     &__reset{
@@ -93,7 +96,9 @@
         font-size: rem(14px);
         background:transparent;
         border:none;
-        padding-left:rem(20px);
+        margin-left:rem(20px);
+        cursor: pointer;
+        outline:none;
 
     }
     
@@ -207,4 +212,8 @@
         display: none;
         
     }
+}
+
+.error{
+    color: orange;
 }

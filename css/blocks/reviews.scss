@@ -2,14 +2,15 @@
     background: black;
     height: 100vh;
     min-height: rem(650px);
-  }
+
+}
   
 .reviews__list {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-   
-  }
+
+}
   
 .reviews__item {
     width: 25%;
@@ -20,4 +21,4 @@
       height: 25%;
     }
     
-  }
+}
