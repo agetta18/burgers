@@ -1,0 +1,109 @@
+.composition{
+    display:none;
+    background: rgba(255, 255, 255, .9);
+    border-radius: rem(5px);
+    color: black;
+    width: rem(270px);
+    // height: rem(332px);
+    position: absolute;
+    top:rem(0px);
+    left:rem(90px);
+
+
+    @include tablets{
+        left:rem(96px);
+        width: rem(323px);
+        
+    }
+
+    @include phones{
+        left:rem(103px);
+    }
+
+    &__list{
+        padding: 8%;
+       
+    }
+      
+    &__item{
+        display: flex;
+        align-items: center;
+        padding-bottom: 6%;
+        justify-content: space-between;
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+
+        @include tablets{
+            width: rem(248px);}
+           
+
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        width: rem(160px);
+        font-family: 'ubuntu', sans-serif;
+        font-size: rem(14px);
+        font-weight: 500;
+       
+      
+    
+    }
+
+}
+.cucumber {
+     width: 50px;
+     height: 38px;
+    
+ }
+
+ .cheese{
+    width: 50px;
+    height: 35px;
+ }
+ .buns{
+    width: 50px;
+    height: 31px;
+ }
+ .salad{
+    width: 50px;
+    height: 39px;
+ }
+
+ .sauce{
+    width: 50px;
+    height: 44px;
+ }
+
+ .beef{
+    width: 50px;
+    height: 40px;
+ }
+
+.icon-burger{
+    width: 46px;
+    height: 45px;
+    
+}
+
+.composition__title {
+    font-size: rem(14px);
+    font-family: "gagalin", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.composition__close{
+    width: rem(20px);
+    height: rem(20px);
+    display: none;
+
+    @include tablets{
+        display: block;
+        position: absolute;
+        right:rem(20px);
+        top:rem(17px);
+        
+    }   
+}

@@ -1,0 +1,219 @@
+.order{
+    background: url("../images/img/order.png") center center / cover no-repeat;
+    
+    &__form-left{
+        width: 50%;
+        margin-right: rem(20px);
+        @include tablets{
+            width: 100%;
+            
+        }
+    }
+    &__form-right{
+        width: 50%;
+        @include tablets{
+            width: 100%;
+            
+            
+        }
+    }
+
+
+    &__row{
+        display: flex;
+        margin-bottom: rem(14px);
+
+    }
+
+    &__block{
+        flex: 1;
+        margin-right: rem(20px);
+        @include phones{
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+         &:last-child{
+             margin-right: 0;
+        }
+    }
+
+    &__title{
+        margin-bottom: rem(5px);
+        color:white;
+        font-family: 'ubuntu', sans-serif;
+        font-size: rem(14px);
+        font-weight: 300;
+    }
+
+    &__input {
+        width: 100%;
+        padding: rem(8px) rem(20px);
+        outline: none;
+        border: rem(2px) solid transparent;
+        border-radius: rem(4px);
+        &:focus{
+            border-color: $yellow;
+        }
+       
+       
+
+       
+    }
+    &__text{
+        width: 100%;
+        padding: rem(8px) rem(20px);
+        outline: none;
+        border: rem(2px) solid transparent;
+        border-radius: rem(4px);
+        resize: none;
+
+        &:focus{
+            border-color: $yellow;
+        }
+
+
+    }
+    &__submit{
+        border-radius: rem(4px);
+        border:none;
+        background-color: #e45028;
+        color:#fff;
+        text-transform: uppercase;  
+        font-family: 'ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: rem(13px);
+        padding: rem(13px) rem(17px);
+        cursor: pointer;
+        outline: none;
+          
+    }
+    &__reset{
+        color: #fff;
+        font-weight: 300;
+        font-family: 'ubuntu', sans-serif;
+        font-size: rem(14px);
+        background:transparent;
+        border:none;
+        margin-left:rem(20px);
+        cursor: pointer;
+        outline:none;
+
+    }
+    
+    &__radio-styler{
+        width: rem(15px);
+        height: rem(15px);
+        border-radius: 50%;
+        background-color: #fff;
+        margin-right: rem(10px);
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &:after{
+        content: '';
+        display: block;
+        background-color: rgb(227, 80, 40);
+        width: rem(7px);
+        height: rem(7px);
+        border-radius: 50%;
+        position: absolute;
+        flex: 0 0 auto;
+        opacity: 0;
+       
+        }
+    }
+    &__radio:checked ~ .order__radio-styler{
+        width: rem(15px);
+        height: rem(15px);
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &__radio{
+        display:inline-block;
+        appearance: none;
+        width: rem(15px);
+        height: rem(15px);
+        margin: 0 rem(-15px) rem(-15px) 0;
+        opacity:0;
+    }
+
+    &__radio:checked ~ .order__radio-styler:after{
+        opacity: 1;
+    }
+}
+
+.order__form-tag{
+    display: flex;
+    @include tablets{
+        flex-direction: column;
+        padding: 0% 15% 20%;
+    }
+    @include phones{
+        padding: 0;
+    }
+}
+
+.radio__label{
+    display: inline-block;
+    margin-bottom: 0;
+
+}
+
+.st-radio{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.order__checkbox{
+    @include tablets{
+    margin-bottom: rem(25px);
+    margin-top: rem(10px);
+    }
+   
+}
+
+.order__row .checkbox__block{
+    @include phones{
+        padding: 0 35%;
+       }
+
+}
+
+.row__radio{
+    @include tablets{
+        padding: 0% 40% 0 0;
+    }
+    @include phones{
+        padding: 0 19%;
+       }
+}
+.order__button{
+   
+    @include phones{
+        padding: 0 29%;
+       }
+}
+
+
+
+.order__row .order__block-kv{
+    @include phones{
+        margin-right: 0;
+    }
+}
+.order__row .order__block-del{
+    @include phones{
+        display: none;
+        
+    }
+}
+
+.error{
+    color: orange;
+}
