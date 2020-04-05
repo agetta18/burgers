@@ -34,9 +34,9 @@ task('copy:html', () => {
       .pipe(reload({ stream: true }));
 })
 
- 
+
 task('styles', () => {
-    return src([...STYLE_LIBS, 'src/blocks/*.scss'])
+    return src([...STYLE_LIBS, 'src/styles/main.scss'])
       .pipe(gulpif(env === 'dev', sourcemaps.init()))
       .pipe(concat('main.min.scss'))
       .pipe(sassGlob())
@@ -102,8 +102,7 @@ task('compress', function() {
 task('fonts', function() {
     return src('src/fonts/**/*')
       .pipe(dest('dist/fonts'))
-  })
-    
+});
 
 task('server', () => {
     browserSync.init({
@@ -125,7 +124,7 @@ task('watch', () => {
 task('default',
  series(
   'clean',
-  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress'),
+  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts'),
   parallel('watch', 'server')
  )
 );
@@ -133,5 +132,5 @@ task('default',
 task('build',
  series(
   'clean',
-  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress'))
+  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts'))
 );

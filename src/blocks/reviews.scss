@@ -1,6 +1,6 @@
 .reviews {
     background: black;
-    height: 100vh;
+    height: 100%;
     min-height: rem(650px);
 
 }
@@ -9,7 +9,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-
 }
   
 .reviews__item {

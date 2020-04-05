@@ -171,9 +171,20 @@
     
 }
 .order__checkbox{
+
+    &-fake{
+    display: inline-flex;
+    width: 1.625rem;
+    height: 1.625rem;
+    background-color: #fff;
+    margin-right: 0.625rem;
+
+    }
+
     @include tablets{
     margin-bottom: rem(25px);
     margin-top: rem(10px);
+    
     }
    
 }

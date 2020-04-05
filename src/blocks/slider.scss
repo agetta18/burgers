@@ -190,6 +190,7 @@
 
 .left__col{
     width: 50%;
+    padding-top: 3%;
 
     @include tablets{
         padding-top: 0;
@@ -200,4 +201,14 @@
         @include phones{   
             width: 95%;
         }
+}
+
+.arrow__left{
+    position: absolute;
+    left: 10%;
+}
+
+.arrow__right{
+    position: absolute;
+    right: 8%;
 }

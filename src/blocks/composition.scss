@@ -98,6 +98,23 @@
     width: rem(20px);
     height: rem(20px);
     display: none;
+    span{
+        display: inline-block;
+        width: rem(20px);
+        height: rem(3px);
+        border-radius: rem(2px);
+        background-color: #eb8262;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+            &:first-of-type{
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:last-of-type{
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+    }
+
 
     @include tablets{
         display: block;
@@ -106,4 +123,7 @@
         top:rem(17px);
         
     }   
+}
+.composition__dram{
+    font-weight: 300;
 }
