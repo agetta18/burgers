@@ -21,6 +21,11 @@
         display: inline-flex;
 
     }
+
+    @include phones{
+        margin-left: rem(30px);
+
+    }
   
 
     &-open{

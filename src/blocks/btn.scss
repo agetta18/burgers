@@ -3,12 +3,17 @@
     text-decoration: none;
     text-transform: uppercase;
     border-radius: rem(5px);
-    font-size: rem(13px);
+    font-size: rem(14px);
     display: inline-block;
     padding: rem(10px) rem(15px);
     margin-left: rem(15px);
     font-family: 'ubuntu', sans-serif;
     font-weight: 500;
     cursor: pointer;
+
+
+    @include phones{
+        padding: 6% 12%;
+    }
     
 }

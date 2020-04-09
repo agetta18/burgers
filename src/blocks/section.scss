@@ -13,35 +13,80 @@
 .section__title{
     font-size: rem(72px);
     color: $yellow;
-    margin-top: rem(100px);
-    margin-bottom: rem(25px);
+    margin-top: 23%;
+    margin-bottom: 4%;
     font-family: 'gagalin', sans-serif;
     line-height: 1;
 
+    
+
     @include tablets{
         margin-top: 0;
-        margin-bottom: rem(58px);
+        margin-bottom: 5%;
+        font-size: 72px;
     }
 
     @include phones{
-        margin-bottom: rem(34px);
+        margin-bottom: 1%;
+        margin-top: 5%;
+        font-size: 62px;
 
     }
 
+   
+    &--team{
+        @include tablets{
+            margin-bottom: 3%;
+            margin-top: -3%;
+        }
+        @include phones{
+            font-size: 50px;
+        }
+    }
 
     &--centered {
         text-align: center;
         margin-top: 0;
       
     }
+
+    &--work{
+        color: rgb(47, 50, 52);   
+        font-size: 60px;
+        margin-top: 1%;
+        margin-bottom: 2%;   
+        @include tablets{
+            font-size: 72px;
+            margin-top: -4%;
+            margin-bottom: 7%;
+        }
+        @include phones{
+            padding: 9%;
+            margin-top: -22%;
+            line-height: 1.2;
+            font-size: 50px;
+            margin-bottom: 1%;
+        }
+   }
     &--color--black {
         color: $black;
         margin-bottom: rem(56px);
-        margin-top: 0;
+        margin-top: -3%;
+        margin-bottom: 8%;
+        @include tablets{
+            margin-top: -22%;
+            margin-bottom: 3%;
+        }
+
+        @include phones{
+            font-size: 50px;
+            margin-top: -11%;
+            margin-bottom: 0;
+        }
     }
     &--food{
         position: absolute;
-        top:rem(111px);
+        top:-23%;
         left:rem(98px);
         color:#fff;
 
@@ -51,26 +96,47 @@
         }
 
         @include phones{
-            left:rem(56px);
-            top:rem(60px);
+            left:12%;
+            top:4%;
+            font-size: 50px;
         }
     }
     &--slider{
         color:#fff;
         font-family: 'gagalin', sans-serif;
         font-size: rem(72px);
-        margin-bottom: rem(50px);
-        margin-top: 5%;
+        margin-bottom: 8%;
+        margin-top: 16%;
+        line-height: 1;
         
 
         @include tablets{
            text-align: center;
+           margin-top: -5%;
+           margin-bottom: 7%;
+           font-size: 72px;
     
         }
         @include phones{   
-            font-size: rem(50px);
-            margin-bottom: rem(35px);
+            font-size: 50px;
+            margin-bottom:6%;
+            margin-top: -5%;
         }
 
     }
+    &--order{
+        margin-top: -2%;
+        margin-bottom: 4%;
+        @include tablets{
+            margin-top: 1%;
+            margin-bottom: 3%;
+        }
+        @include phones{
+            font-size: 50px;
+            padding: 3%;
+            margin-top: -4%;
+            line-height: 1.2;
+        }
+    }
+
 }

@@ -3,8 +3,16 @@ const display = $('.maincontent');
 
 let inScroll = false;
 
-// const md = new MobailDetect(window.navigator.userAgent);
-// const isMobile = md.mobile();
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const canScroll = function(){
+    return !$('.review__overlay').hasClass('review__overlay--active');
+}
+
+const canScrollMenu = function(){
+    return !$('.menu__list').hasClass('menu__list--open');
+}
 
 const performTransition = sectionEq =>{
     if (inScroll) return
@@ -18,14 +26,12 @@ const performTransition = sectionEq =>{
         transform : `translateY(${position}%)`
     });
 
-    setTimeout(() =>{
-        $('.pagination__item')
-        .eq(sectionEq)
-        .addClass('pagination__item--active')
-        .siblings()
-        .removeClass('pagination__item--active');
-        inScroll = false;
-    }, 1300);
+    
+
+   setTimeout(() =>{
+       $('.pagination__item').eq(sectionEq).addClass('pagination__item--active').siblings().removeClass('pagination__item--active');
+       inScroll = false;
+   }, 1300);
 
 };
 
@@ -46,7 +52,16 @@ const scrollSection = direction => {
 
 $(window).on('wheel', e => {
 
+    if (!canScroll()){
+        return
+    }
+
+    if (!canScrollMenu()){
+        return
+    }
+
     const deltaY = e.originalEvent.deltaY;
+
 
     if (deltaY > 0){
         scrollSection('next');
@@ -78,7 +93,6 @@ $(document).on('keydown', e =>{
 
 $('[data-scroll-to]').on('click', e =>{
     e.preventDefault();
-
     const $this = $(e.currentTarget);
     const target = $this.attr('data-scroll-to');
 
@@ -86,19 +100,19 @@ $('[data-scroll-to]').on('click', e =>{
 });
 
 
-// if (isMobile) {
-//     $("body").swipe({
-//         swipe: (event, direction) => {
-//           let scrollDirection;
+if (isMobile) {
+    $("body").swipe( {
+        swipe: (event, direction)  => {
+          let scrollDirection;
              
-//           if (direction === "up") scrollDirection = "next";
-//           if (direction === "down") scrollDirection = "prev";
+          if (direction === "up") scrollDirection = "next";
+          if (direction === "down") scrollDirection = "prev";
     
-//           scrollSection(scrollDirection);
+          scrollSection(scrollDirection);
         
-//         },
-//     });
+        },
+    });
+};
 
-// }
 
 

@@ -104,6 +104,12 @@ task('fonts', function() {
       .pipe(dest('dist/fonts'))
 });
 
+task('video', function() {
+    return src('src/video/video.mp4')
+      .pipe(dest('dist/video'))
+});
+
+
 task('server', () => {
     browserSync.init({
         server: {
@@ -124,7 +130,7 @@ task('watch', () => {
 task('default',
  series(
   'clean',
-  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts'),
+  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts', 'video'),
   parallel('watch', 'server')
  )
 );
@@ -132,5 +138,5 @@ task('default',
 task('build',
  series(
   'clean',
-  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts'))
+  parallel('copy:html', 'styles', 'scripts', 'icons', 'compress', 'fonts', 'video'))
 );

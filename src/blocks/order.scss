@@ -8,13 +8,20 @@
             width: 100%;
             
         }
+        @include phones{
+            margin-right: 0;
+        }
     }
     &__form-right{
         width: 50%;
         @include tablets{
             width: 100%;
+            margin-top: 5%;
             
             
+        }
+        @include phones{
+            margin-top: 2%;
         }
     }
 
@@ -22,6 +29,12 @@
     &__row{
         display: flex;
         margin-bottom: rem(14px);
+        @include tablets{
+            margin-bottom: 17px;
+        }
+        @include phones{
+            margin-bottom: rem(16px);
+        }
 
     }
 
@@ -45,14 +58,24 @@
         font-family: 'ubuntu', sans-serif;
         font-size: rem(14px);
         font-weight: 300;
+        @include tablets{
+            font-size: 14px;
+        }
+        @include phones{
+            font-size:14px;
+        }
     }
 
     &__input {
         width: 100%;
-        padding: rem(8px) rem(20px);
+        padding: rem(7px) rem(20px);
         outline: none;
         border: rem(2px) solid transparent;
         border-radius: rem(4px);
+        margin-top: 2%;
+        @include tablets{
+            margin-top: 7px;
+        }
         &:focus{
             border-color: $yellow;
         }
@@ -68,6 +91,10 @@
         border: rem(2px) solid transparent;
         border-radius: rem(4px);
         resize: none;
+        margin-top: 2%;
+        @include tablets{
+            margin-top: 7px;
+        }
 
         &:focus{
             border-color: $yellow;
@@ -87,6 +114,9 @@
         padding: rem(13px) rem(17px);
         cursor: pointer;
         outline: none;
+        @include phones{
+            font-size: 14px;
+        }
           
     }
     &__reset{
@@ -96,9 +126,19 @@
         font-size: rem(14px);
         background:transparent;
         border:none;
-        margin-left:rem(20px);
+        margin-left:2%;
+        margin-top: 3%;
         cursor: pointer;
         outline:none;
+        @include tablets{
+            margin-left: 3%;
+            margin-top: 7%;
+        }
+        @include phones{
+            font-size:14px;
+            margin-left: 6%;
+            margin-top: 17%;
+        }
 
     }
     
@@ -112,6 +152,10 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        @include phones{
+            width: rem(18px);
+            height: rem(18px);
+        }
 
         &:after{
         content: '';
@@ -123,6 +167,10 @@
         position: absolute;
         flex: 0 0 auto;
         opacity: 0;
+        @include phones{
+            width: rem(8px);
+            height: rem(8px);
+        }
        
         }
     }
@@ -131,6 +179,10 @@
         height: rem(15px);
         border-radius: 50%;
         background-color: #fff;
+        @include phones{
+            width: rem(18px);
+            height: rem(18px);
+        }
     }
 
     &__radio{
@@ -140,6 +192,8 @@
         height: rem(15px);
         margin: 0 rem(-15px) rem(-15px) 0;
         opacity:0;
+       
+        
     }
 
     &__radio:checked ~ .order__radio-styler:after{
@@ -151,7 +205,7 @@
     display: flex;
     @include tablets{
         flex-direction: column;
-        padding: 0% 15% 20%;
+        padding: 3% 18% 20%;
     }
     @include phones{
         padding: 0;
@@ -161,47 +215,66 @@
 .radio__label{
     display: inline-block;
     margin-bottom: 0;
+    @include phones{
+        font-size: 14px;
+    }
 
 }
 
 .st-radio{
     display: flex;
     align-items: center;
-    
+    margin-right: -27%;
+    @include tablets{
+        margin-right: -30%;
+    }
+   
     
 }
-.order__checkbox{
+.checkbox__block{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
 
-    &-fake{
-    display: inline-flex;
-    width: 1.625rem;
-    height: 1.625rem;
-    background-color: #fff;
-    margin-right: 0.625rem;
+    & .order__title{
+        margin-bottom: 0;
+        margin-left: 9px;
+
 
     }
+  
+}
 
-    @include tablets{
-    margin-bottom: rem(25px);
-    margin-top: rem(10px);
+.order__checkbox{
     
+ 
+    @include tablets{
+        margin-bottom: rem(25px);
+        margin-top: rem(10px);
     }
    
 }
 
+
 .order__row .checkbox__block{
     @include phones{
         padding: 0 35%;
+       }
+       @include phones{
+           padding: 0 30%;
+           margin-top: 5%;
        }
 
 }
 
 .row__radio{
     @include tablets{
-        padding: 0% 40% 0 0;
+        padding: 0;
     }
     @include phones{
-        padding: 0 19%;
+        padding: 0;
+        margin-top: 10%;
+        padding-left: 1%;
        }
 }
 .order__button{
@@ -228,3 +301,42 @@
 .error{
     color: orange;
 }
+
+
+
+.order__checkbox {
+    display: none;
+}
+    
+.order__checkbox-fake {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    position: relative;
+}
+    
+.order__checkbox:checked ~ .order__checkbox-fake {
+    background-color: #fff;
+}
+    
+.order__checkbox-fake:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+    
+.order__checkbox:checked ~ .order__checkbox-fake:after {
+    display: block;
+}
+    
+.checkbox__block .order__checkbox-fake:after {
+    top:4%;
+    left:33%;
+    width: 4px;
+    height: 8px;
+    border: solid #e45028;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+  

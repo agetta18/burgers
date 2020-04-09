@@ -4,7 +4,8 @@
     @include phones{
         flex-direction: column;
         align-items: center;
-        padding: rem(20px) 0;
+        padding: 2%;
+
     }
 
     &__adress{
@@ -12,6 +13,10 @@
         padding-bottom: rem(15px);
         align-items: center;
         line-height: 1.714;
+        @include tablets{
+            font-size: 14px;
+            padding-left: 1%;
+        }
         @include phones{
             text-align: center;
         }

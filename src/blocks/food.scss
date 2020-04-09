@@ -65,7 +65,9 @@
     position: relative;
     text-decoration: none;
     cursor: pointer;
-   
+   @include tablets{
+       width: 80px;
+   }
 }
 
 .food__title{
@@ -81,7 +83,13 @@
     transform-origin: 0 0;
     left: 50%;
     top: 100%;
-    margin-top: rem(-20px);
+    margin-top: -47%;
+    @include tablets{
+        font-size: 40px;
+    }
+    @include phones{
+        margin-top: -76%;
+    }
    
 }
 

@@ -1,8 +1,12 @@
 .pagination {
     position: fixed;
-    top:10%;
-    right:3%;
+    top:rem(94px);
+    right:rem(48px);
     z-index: 10;
+
+    @include tablets{
+        display: none;
+    }
 }
 
 .pagination__list{
@@ -13,7 +17,7 @@
 }
 
 .pagination__item{
-    margin-bottom: 12px;
+    margin-bottom: rem(5px);
 }
 
 .pagination__link{

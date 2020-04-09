@@ -7,25 +7,31 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablets{
+        padding-top: 6%;
+    }
+
+
 
     @include phones{
         flex-direction: column;
         padding: 2%;
+        margin-top: 4%;
     }
 
 }
 
 .features__item{
-    width: calc(100% / 3 - 26px);
+    width: calc(100% / 3 - 10px);
 
     @include tablets {
-        width: calc(100% / 3 - 30px);
+        width: calc(100% / 3 - 10px);
 
     }
     @include phones{
         display: flex;
         width: 100%;
-        padding-bottom: rem(50px);
+        padding-bottom: 8%;
         
         
      }

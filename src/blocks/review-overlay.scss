@@ -33,6 +33,7 @@
         position: absolute;
         top: 10%;
         left: 95%;
+
             &:first-of-type{
                 transform: translate(-50%, -50%) rotate(45deg);
             }
@@ -51,4 +52,8 @@
     line-height: 1.714;
     color: rgb(47, 50, 52);
      
+}
+
+.review__overlay--active{
+    display: flex;
 }

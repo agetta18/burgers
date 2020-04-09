@@ -1,8 +1,15 @@
 .scroll-down{
     position: absolute;
-    bottom: rem(40px);
+    bottom: 5%;
     left:50%;
     transform: translate(-50%);
+    @include tablets{
+        bottom: 3%;
+    }
+    @include phones{
+        bottom: 3%;
+       
+    }
 
    
 }

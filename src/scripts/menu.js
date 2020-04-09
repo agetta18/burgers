@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-const hamb=document.getElementById('menu__hamburger');
+const hamb = document.getElementById('menu__hamburger');
 const menu = document.getElementById('menu__list');
 const icon = document.getElementById('icon__menu');
 

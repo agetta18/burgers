@@ -45,29 +45,35 @@
      }
 
      @include phones{
-        padding:20%;
+        padding:17%;
+        
     }
   }
 
   &__username{
     font-family: "gagalin", sans-serif; 
-    margin-bottom: rem(28px);
+    margin-bottom: 8%;
+    font-size: 14px;
     @include tablets{
         margin-bottom: 4%;
+        margin-top: 3%;
 
      }
      @include phones{
-        font-size: rem(24px);
+        font-size: 24px;
         margin-bottom: rem(30px);
+        margin-top: 0;
     }
   }
 
   &__message{
     font-family: "ubuntu", sans-serif;    
-    line-height: 1.714;  
-    margin-bottom: rem(18px);
+    line-height: 1.724;  
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 4%;
     @include tablets{
-        margin-bottom: rem(30px);
+        margin-bottom: 7%;
      }
 
      @include phones{
@@ -119,8 +125,8 @@
     @include phones{
         border-radius: rem(5px);
         display: inline-block;
-        padding: rem(12px) rem(14px);
-        font-size: rem(13px);
+        padding: rem(10px) rem(16px);
+        font-size: rem(14px);
         font-family: 'ubuntu', sans-serif;
         text-transform: uppercase;
         text-align: center;

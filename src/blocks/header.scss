@@ -3,10 +3,23 @@
     justify-content: space-between;
     align-items: center;
     padding-top: rem(10px) ;
+
+    @include tablets{
+        padding-right: rem(26px);
+    }
+
+    @include phones{
+        padding: 2%;
+    }
 }
 
 .header__btns{
     display: flex;
     align-items: center;
+
+
+    @include phones{
+        padding-right: 1%;
+    }
 }
 
