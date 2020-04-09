@@ -1,5 +1,5 @@
 .work__player{
-    background: url('../images/img/howwork.png') center center / cover no-repeat;
+    background: url('./images/img/howwork.png') center center / cover no-repeat;
 }
 
 .container__player{
@@ -59,16 +59,16 @@ video{
         right: 0;
         bottom: 0;
         cursor: pointer;
-        background-image: url(../images/img/video.png);
+        background-image: url(./images/img/video.png);
         justify-content: center;
         align-items: center;
 
         @include tablets{
-            background-image: url(../images/img/player768.png);
+            background-image: url(./images/img/player768.png);
         }
 
         @include phones{
-            background-image: url(../images/img/player480.png);
+            background-image: url(./images/img/player480.png);
         }
 
 
