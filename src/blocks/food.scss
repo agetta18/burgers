@@ -65,9 +65,9 @@
     position: relative;
     text-decoration: none;
     cursor: pointer;
-   @include tablets{
+    @include tablets{
        width: 80px;
-   }
+    }
 }
 
 .food__title{

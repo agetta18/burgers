@@ -13,8 +13,8 @@
 }
 
 .modal {
-    width: 196px;
-    height: 106px;
+    width: rem(196px);
+    height: rem(106px);
     background-color: #fff;
     border-radius: 5px;
     display: flex;
@@ -30,8 +30,8 @@
     font-size: 12px;
     font-weight: 300;
     text-align: center;
-    padding: 5px;
-    padding-bottom: 15px;
+    padding: rem(5px);
+    padding-bottom: rem(15px);
     
 }
 

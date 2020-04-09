@@ -9,8 +9,8 @@
 }
 
 video{
-    width:660px ;
-    height:405px;
+    width: 660px;
+    height: 405px;
   
 
     @include tablets{
@@ -25,23 +25,6 @@ video{
     }
 
 
-}
-
-.player__elem{
-    width:660px ;
-    height:405px;
-
-    @include tablets{
-        width: 720px;
-        height: 450px;
-    }
-
-    @include phones{
-        width: 460px;
-        height: 283px;
-    }
-
-   
 }
 
 .player{
@@ -94,7 +77,7 @@ video{
     &__controls{
         background-color: rgb(62, 62, 62);
         width: 660px;
-        height: 35px;
+        height: rem(35px);
         display: flex;
         position: absolute;
         bottom: 0;
@@ -102,23 +85,23 @@ video{
         right: 0;
         align-items: center;
         justify-content: space-between;
-        padding:  0 20px;
+        padding:  0 rem(21px);
 
         @include tablets{
             width: 720px;
-            height: 47px;
+            height: rem(47px);
         }
 
         @include phones{
             width: 460px;
-            height: 24px;
+            height: rem(24px);
         }
 
        
     }
 
     &__playback{
-        height: 16px;
+        height: rem(16px);
         width: 445px;
         position: relative;
         margin-left:  10px;
@@ -131,7 +114,7 @@ video{
     
          &:before{
             content: '';
-            height: 4px;
+            height: rem(4px);
             position: absolute;
             top:50%;
             left:0;
@@ -145,7 +128,7 @@ video{
             background-color: #626262;
             width: 12px;
             height: 12px;
-            border-radius: 50px;
+            border-radius: 50%;
             border: none;
             padding: 0;
             position: absolute;
@@ -154,12 +137,12 @@ video{
             left:0;
             outline: none;
             @include tablets{
-                width: 15px;
-                height: 15px;
+                width: rem(15px);
+                height: rem(15px);
             }
             @include phones{
-                width: 10px;
-                height: 10px;
+                width: rem(10px);
+                height: rem(10px);
             }
 
          }
