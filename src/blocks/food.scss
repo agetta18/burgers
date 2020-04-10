@@ -31,7 +31,6 @@
         &.open {
             @include phones{
                 position: absolute;
-        
                 z-index: 2;
             }
            
@@ -48,7 +47,7 @@
                 //    flex:1;
                }
                @include phones{
-                   flex:.9;
+                   flex:.85;
                }
                 
              

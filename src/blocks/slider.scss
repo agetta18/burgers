@@ -149,13 +149,39 @@
         display: flex;
         flex: 0 0 100%; 
         max-width: 100%;
+
+        &--big{
+
+
+            @include tablets{
+                padding:3%;
+            }
+            @include phones{
+                padding:2%;
+
+            }
+            
+            & .left__col{
+                padding: 2%;
+            }
+
+            & .slider__composition{
+                @include phones{
+                    top:-5%;
+                }
+            }
+            & .slider__kkal{
+                @include phones{
+                    top: -1%;
+                }
+            }
+        }
        
 
         @include tablets{
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            }
+            align-items: center; }
     }
 
     &__img{

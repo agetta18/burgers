@@ -15,18 +15,17 @@ const canScrollMenu = function(){
 }
 
 const performTransition = sectionEq =>{
+
     if (inScroll) return
 
     inScroll = true;
     const position = sectionEq * -100;
-
+  
     sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
 
     display.css({
         transform : `translateY(${position}%)`
     });
-
-    
 
    setTimeout(() =>{
        $('.pagination__item').eq(sectionEq).addClass('pagination__item--active').siblings().removeClass('pagination__item--active');
@@ -61,7 +60,6 @@ $(window).on('wheel', e => {
     }
 
     const deltaY = e.originalEvent.deltaY;
-
 
     if (deltaY > 0){
         scrollSection('next');
@@ -101,6 +99,7 @@ $('[data-scroll-to]').on('click', e =>{
 
 
 if (isMobile) {
+    
     $("body").swipe( {
         swipe: (event, direction)  => {
           let scrollDirection;
@@ -108,8 +107,7 @@ if (isMobile) {
           if (direction === "up") scrollDirection = "next";
           if (direction === "down") scrollDirection = "prev";
     
-          scrollSection(scrollDirection);
-        
+          scrollSection(scrollDirection); 
         },
     });
 };
