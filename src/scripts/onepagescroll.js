@@ -71,7 +71,7 @@ $(window).on('wheel', e => {
 
 });
 
-$(document).on('keydown', e =>{
+$(document).on('keydown', e => {
     const tagName = e.target.tagName.toLowerCase();
 
     if( tagName != 'input' && tagName != 'textarea') {

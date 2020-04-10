@@ -162,7 +162,15 @@
             }
             
             & .left__col{
-                padding: 2%;
+
+                padding: 4%;
+
+                @include tablets{
+                    padding:1%;
+                }
+                @include phones{
+                    padding: 4%;
+                }
             }
 
             & .slider__composition{
@@ -171,6 +179,9 @@
                 }
             }
             & .slider__kkal{
+                @include tablets{
+                    top: 0%;
+                }
                 @include phones{
                     top: -1%;
                 }
