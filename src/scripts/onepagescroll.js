@@ -14,6 +14,7 @@ const canScrollMenu = function(){
     return !$('.menu__list').hasClass('menu__list--open');
 }
 
+
 const performTransition = sectionEq =>{
 
     if (inScroll) return
@@ -26,11 +27,11 @@ const performTransition = sectionEq =>{
     display.css({
         transform : `translateY(${position}%)`
     });
-
-   setTimeout(() =>{
+   
+    setTimeout(() =>{
        $('.pagination__item').eq(sectionEq).addClass('pagination__item--active').siblings().removeClass('pagination__item--active');
        inScroll = false;
-   }, 1300);
+    }, 1300);
 
 };
 
@@ -51,6 +52,10 @@ const scrollSection = direction => {
 
 $(window).on('wheel', e => {
 
+    if(window.innerWidth < 769) {
+        return;
+    }
+    
     if (!canScroll()){
         return
     }
@@ -68,6 +73,8 @@ $(window).on('wheel', e => {
     if (deltaY < 0){
         scrollSection('prev');
     }
+
+   
 
 });
 
@@ -111,6 +118,7 @@ if (isMobile) {
         },
     });
 };
+
 
 
 
